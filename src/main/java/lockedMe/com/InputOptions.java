@@ -1,5 +1,6 @@
 package lockedMe.com;
 
+import java.io.IOException;
 import java.util.Scanner;
 
 public class InputOptions {
@@ -12,11 +13,25 @@ public class InputOptions {
 			String main_opt = input.next();
 			
 			if("A".equals(main_opt)) {
-				System.out.println("Choice A");	
+			System.out.println("These files are currently in the folder:");
+			try {
+				GetFiles.listFiles();
+			} catch (IOException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+			
 			}
 			
 			else if ("B".equals(main_opt)) {
-				System.out.println("Choice B");	
+				try {
+					BOptions.newOpts();
+					
+				} catch (IOException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}	
+				
 			}
 			
 			else if ("C".equals(main_opt)) {
@@ -28,7 +43,14 @@ public class InputOptions {
 			}
 			
 			
+		} catch (Exception e) {
+			// TODO: handle exception
+			e.printStackTrace();
 		}
+		
+		
 	}
+	
+	
 
 }
