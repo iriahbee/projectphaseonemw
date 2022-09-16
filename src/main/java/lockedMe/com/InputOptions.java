@@ -24,13 +24,7 @@ public class InputOptions {
 			}
 			
 			else if ("B".equals(main_opt)) {
-				try {
-					BOptions.newOpts();
-					
-				} catch (IOException e) {
-					// TODO Auto-generated catch block
-					e.printStackTrace();
-				}	
+				BOptions.newOpts();	
 				
 			}
 			

@@ -1,12 +1,11 @@
 package lockedMe.com;
 
-import java.io.IOException;
 import java.util.Scanner;
 
 public class BOptions {
 	
 	
-	public static void newOpts() throws IOException {
+	public static void newOpts() {
 	try (// TODO Auto-generated method stub
 			Scanner input = new Scanner(System.in)) {
 		        System.out.println("Select 'AF' to Add File");
@@ -19,7 +18,7 @@ public class BOptions {
 			
 				
 				   if("AF".equals(b_opts)) {
-					System.out.println("Choice Add");	
+					   AddFile.newFile();
 					}
 					
 					else if ("S".equals(b_opts)) {
@@ -28,7 +27,11 @@ public class BOptions {
 					}
 					
 					else if ("D".equals(b_opts)) {
-						System.out.println("Choice Delete");	
+						DeleteFile.removeFile();
+					}
+				   
+					else if ("E".equals(b_opts)) {
+						
 					}
 					
 					else {
@@ -36,7 +39,7 @@ public class BOptions {
 					}
 				}
 }
-	public static void main(String[] args) throws IOException {
+	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		
 		newOpts();
