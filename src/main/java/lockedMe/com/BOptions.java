@@ -4,12 +4,17 @@ import java.util.Scanner;
 
 public class BOptions {
 	  
-		public static void newOpts() {
-
-			try (// TODO Auto-generated method stub
+	   //create method for sub menu 
+		public static void subMenu() {
+            //try block
+			try (
+					
+		   //Scanner to create input object
 			Scanner input = new Scanner(System.in)) {
 				
 				int choice;
+				
+				//while loop to iterate through options
 				while(true){
 				
 				System.out.print("");
@@ -22,8 +27,10 @@ public class BOptions {
 				System.out.print("\nEnter Your Choice: \n");
 				
 				
-		
+				//variable to hold input option
 				choice= input.nextInt();
+				
+				//switch case of methods 
 				switch(choice){
 				
 				case 1: 
@@ -61,7 +68,7 @@ public class BOptions {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		
-		newOpts();
+		subMenu();
 		
 	}
 }

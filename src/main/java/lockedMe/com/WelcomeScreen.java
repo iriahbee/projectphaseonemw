@@ -5,7 +5,8 @@ import java.util.Scanner;
 
 public class WelcomeScreen {
 	
-	public static void Welcome() {
+	//creating method to display welcome greetings
+	public static void nWelcome() {
 	
 	System.out.println("*******Welcome to LockedMe.com!!*******\n");
 	System.out.println("My name is Solagne Lake and I am this applications programmer.\n");
@@ -19,14 +20,16 @@ public class WelcomeScreen {
 	 System.out.println("");
 	}
 	
+	// creating main menu method
 	public static void mainMenu(){
 	
 		
-		
-		
+		//Scanner to create input object
 		try (Scanner input = new Scanner(System.in)) {
 			
+			
 			int choice;
+			//while loop to iterate through options
 			while(true){
 				
 			    System.out.println("Main Menu\n");
@@ -35,9 +38,11 @@ public class WelcomeScreen {
 			    System.out.print("3.) Exit\n");
 			    System.out.println("----------------------------------------\n");
 			    System.out.print("\nEnter Your Menu Choice: ");
-			    
+			 
+			 //variable to hold input option
 			    choice = input.nextInt();
 			
+			    //switch case of methods 
 			    switch(choice){
 
 			    case 1:
@@ -50,7 +55,7 @@ public class WelcomeScreen {
 					}
 					break;
 			    case 2: 
-			    	BOptions.newOpts();	
+			    	BOptions.subMenu();	
 			    	break;
 			    case 3:        	
 			    	 System.out.println("\nExiting Program...");
@@ -70,7 +75,7 @@ public class WelcomeScreen {
 
 	
 public static void main(String[] args) {
-	Welcome();
+	nWelcome();
 	mainMenu();
 	
 }
