@@ -14,9 +14,9 @@ public class GetFiles {
 //     Creating a list object based on the file path  
 		List<Path> get= Files.list(Paths.get("C:\\Users\\user\\git\\projectphaseonemw\\src\\ExampleFiles"))
 		//Filtering for checking whether file exist  
-		.filter(f -> Files.exists(f))
+		.filter(Files::exists)
 		//Mapping to get file names only 
-		.map(s -> s.getFileName())
+		.map(Path::getFileName)
 		//Sorting Files by default ascending order(Will not work on numbers)
         .sorted()
         //creating the list

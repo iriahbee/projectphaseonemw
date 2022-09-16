@@ -17,7 +17,7 @@ public class Search {
 			// Creating BufferedReadered object
 			  BufferedReader fn = new BufferedReader(
 		                new InputStreamReader(System.in));
-		            System.out.println("Enter the file name you would like find:");
+		            System.out.println("\nEnter the file name you would like find:");
 		                
 		          // Reading File name + reading file path
 		            fileName = fn.readLine();
@@ -31,7 +31,7 @@ public class Search {
 		            String[] flist = directory.list();
 		            int flag = 0;
 		            if (flist == null) {
-		                System.out.println("Empty directory.");
+		                System.out.println("\nEmpty directory.");
 		            }
 		            else {
 		      
@@ -46,12 +46,12 @@ public class Search {
 		            }
 		      
 		            if (flag == 0) {
-		                System.out.println("File Not Found");
+		                System.out.println("\nFile Not Found");
 		            }
 		        }
 		   
 		      catch(IOException e) {
-		      System.out.println("Exception Occurred:");
+		      System.out.println("\nException Occurred:");
 		      e.printStackTrace();
 		    }    
 		 } 

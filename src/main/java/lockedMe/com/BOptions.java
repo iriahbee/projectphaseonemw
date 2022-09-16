@@ -3,45 +3,65 @@ package lockedMe.com;
 import java.util.Scanner;
 
 public class BOptions {
-	
-	
-	public static void newOpts() {
-	try (// TODO Auto-generated method stub
+	  
+		public static void newOpts() {
+
+			try (// TODO Auto-generated method stub
 			Scanner input = new Scanner(System.in)) {
-		        System.out.println("Select 'AF' to Add File");
-		        System.out.println("Select 'S' to Search for File");
-		        System.out.println("Select 'D' to Delete");
-		        System.out.println("Select 'E' to Exit to Main Menu");
-		        System.out.println("What would you like to do? ");
 				
-		        String b_opts = input.next();
-			
+				int choice;
+				while(true){
 				
-				   if("AF".equals(b_opts)) {
-					   AddFile.newFile();
-					}
-					
-					else if ("S".equals(b_opts)) {
-						System.out.println("Choice Search");	
-						
-					}
-					
-					else if ("D".equals(b_opts)) {
-						DeleteFile.removeFile();
-					}
-				   
-					else if ("E".equals(b_opts)) {
-						
-					}
-					
-					else {
-						System.out.println("Invalid Input Choice");
-					}
+				System.out.print("");
+				System.out.println("\nWhat would you like to do? ");
+				System.out.print("1.) Add New File.\n");
+				System.out.print("2.) Delete File. \n");
+				System.out.print("3.) Search for File.\n");
+				System.out.print("4.) Back to Main Menu\n");
+				System.out.println("----------------------------------------\n");
+				System.out.print("\nEnter Your Choice: \n");
+				
+				
+		
+				choice= input.nextInt();
+				switch(choice){
+				
+				case 1: 
+					 AddFile.newFile();
+				break;
+				
+				
+				case 2: 
+					DeleteFile.removeFile();
+			    break;	
+				
+				case 3: 
+				   Search.searchFile();
+				break;
+				
+				case 4: 
+					WelcomeScreen.mainMenu();
+			    break;	
+				
+				
+				default :
+					System.out.println("This is not a valid Menu Option! Please Select Another");
+					break;
 				}
-}
+				
+				}	
+				}
+			    catch (Exception e) {
+				e.printStackTrace();
+			}
+		
+		}
+
+
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		
 		newOpts();
+		
 	}
 }
